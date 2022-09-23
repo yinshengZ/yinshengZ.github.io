@@ -15,7 +15,7 @@ export default{
 <style scoped>
 .profile-box{
     width:100%;
-    min-height:300px;        
+    min-height:200px;        
     background-color:white;
     float:left;
 }
