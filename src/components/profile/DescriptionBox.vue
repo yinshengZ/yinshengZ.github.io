@@ -1,6 +1,11 @@
 <template>
     <div class="name">
         <h1>Yinsheng Zhou</h1>
+        <div class="social">
+            <span><a href="https://github.com/yinshengZ?tab=repositories">
+             <img src="../../assets/github.png" alt="github-icon" title="github"></a> </span>
+        </div>
+        
     </div>
 
     <h3>Education:</h3>
@@ -24,16 +29,13 @@
         </ul>
         <h4>Freelance works</h4>
         <ul>
-            <li> <a href="www.tcmyard.co.uk">www.tcmayrd.co.uk</a></li>
-            <li><a href="www.ftcmp.co.uk">www.ftcmp.co.uk</a></li>
+            <li> <a href="https://www.tcmyard.com/">www.tcmayrd.co.uk</a></li>
+            <li><a href="https://www.ftcmp.co.uk">www.ftcmp.co.uk</a></li>
             <li>Clinic Management System (Laravel, Vue, Css, raw JS)</li>
         </ul>
     </div>
 
-    <div class="projects descriptions">
-        <h3>Projects</h3>
-        <span><a href="https://github.com/yinshengZ?tab=repositories"><img src="../../assets/github.png" alt="github-icon"></a> </span>
-    </div>
+   
    
     
 </template>
@@ -46,9 +48,14 @@
 
 .name>h1{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:brown;
-    text-decoration:underline;
+    
+   
 }
+
+.social{
+
+}
+
 h3{
     text-align: left;
 }
