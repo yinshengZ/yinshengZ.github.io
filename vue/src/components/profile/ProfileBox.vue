@@ -1,12 +1,24 @@
 <template>
     <div class="profile-box">
-    <img src="../../assets/profile.png" alt="profile-image">   
+    <n-card
+    title="Yinsheng Zhou">
+    <template #cover>
+        <img src="../../assets/profile.png" alt="profile-image">   
+    </template>
+
+
+    </n-card>
+    
     </div>
 </template>
 
 
 <script>
+import {NCard} from 'naive-ui'
 export default{
+    components:{
+        NCard,
+    }
 
 }
 
@@ -19,4 +31,9 @@ export default{
     background-color:white;
     float:left;
 }
+.n-card{
+    max-width:300px;
+    margin:auto;
+}
+
 </style>
