@@ -1,42 +1,137 @@
 <template>
 <div>
+
   <div class="container">
-    <div class="profile-box">
+    <nav>
+      <p>(navigation bar)</p>
+    </nav>
+
+
+    <div class="grid-container">
+    <div class="grid-item">    
       <div class="photo-box">
-        <profile-box></profile-box>
+        <img src="../src/assets/profile.png" alt="profile-photo" width="280" height="300">
       </div>
-      <div class="description">
-        <description-box></description-box>
+      <div class="works">
+        <n-divider title-placement="left">
+          Works
+        </n-divider>
+        <ul>
+          <li>TCM Yard: Secretary</li>
+          <li>tcmyard-manager</li>
+          <li>FF14 Static Profile</li>          
+        </ul>
+      </div>
+
+      <div class="skills">
+        <n-divider title-placement="left">
+          Skills
+        </n-divider>
+        <ul>
+          <li>PHP</li>
+          <li>HTML</li>
+          <li>Javascript</li>
+          <li>CSS</li>
+          <li>MYSQL</li>
+        </ul>
       </div>
     </div>
+    <div class="grid-item">
+      <div class="personal-description">
+        <h1>Yinsheng Zhou</h1>
+        <n-p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sapiente deserunt sint in architecto ipsam deleniti temporibus, ad qui non illo optio iure, maxime beatae nemo recusandae sunt? Molestiae, dolorum.</n-p>
+      </div>
+      <div class="description-grid">
+        <div class="description-grid-item description">
+          <div class="description-title">
+            <n-h2>Description:</n-h2>
+          </div>
+          
+        </div>
 
+        <div class="description-grid-item contacts">
+          <div class="description-title"><n-h2>Contacts:</n-h2></div>
+          
+        </div>
+      </div>
 
-    <div class="projects">
-      <navigation-bar></navigation-bar>
+      <div class="projects">
+        <n-divider
+        title-placement="center">
+          Projects
+        </n-divider>
+        <n-tabs
+        type="line"
+        animated>
+        <n-tab-pane
+        name="tcmyard-manager"
+        tab="TCM Yard Manager">
+         <div class="projects-grid">
+          <div class="project-description">
+            <n-p>Project Descriptions:</n-p>
+          </div>
+          <div class="project-screenshots">
+            <div class="slides">
+            <n-carousel show-arrow>
+            <img src="../src/assets/1.jpg" alt="" class="carousel-img">
+            <img src="../src/assets/2.jpeg" alt="" class="carousel-img">
+            <img src="../src/assets/3.jpg" alt="" class="carousel-img">
+            <img src="../src/assets/4.jpg" alt="" class="carousel-img">
+          </n-carousel>
+          </div>
+          </div>
+          
+         </div>
+
+          
+          
+          
+        </n-tab-pane>
+
+        <n-tab-pane
+        name="ff14-static-profile"
+        tab="FF14 Static Profile">
+          ff14
+        </n-tab-pane>
+
+        <n-tab-pane
+        name="mixed-converters"
+        tab="Mixed Converters">
+        Converters
+        </n-tab-pane>
+        </n-tabs>
+      </div>
+      
+      </div>
     </div>
-  
     
+    
+   
   </div>
-  
+
+
 </div>
+
+ 
+  
+
 
 
 </template>
 
 <script>
 
-import NavigationBar from './components/navigation/NavBar.vue'
-import ProfileBox from './components/profile/ProfileBox.vue'
-import DescriptionBox from './components/profile/DescriptionBox.vue'
+import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel} from 'naive-ui'
 
 export default {
   name: 'App',
   components: {
-    //HelloWorld
-    NavigationBar,
-    ProfileBox,
-    DescriptionBox
-    
+   NDivider,
+   NTabs,
+   NTabPane,
+  NH2,
+  NP,
+  NCarousel,
 
   }
 }
@@ -51,7 +146,58 @@ export default {
   color: #2c3e50;
   margin-top: 20px;  
 }
+.container{
+  background-color:white;
+  min-height: fit-content;
+  border-radius:10px;
+}
+nav{
+  margin:auto;
+  width:95%;
+  min-height: 50px;
+  border-radius: 10px;
+  border-style: solid;
+}
+.grid-container{
+  display:grid;
+  grid-template-columns: 300px auto;
+  column-gap:5px;
+  padding:25px;
+ 
+}
+.grid-item{ 
+ background-color:#edf2f2; 
+  border-radius:10px;
+  margin-top:2px;
 
+}
+.description-grid{
+  display:grid;
+  grid-template-columns: auto auto;
+  column-gap: 5px;
+  padding:25px;
+}
+
+.description-title{
+  float:left;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns: 400px 400px;
+  column-gap: 50px;
+}
+.carousel-img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.photo-box{
+  padding:10px;
+}
+
+/*
 .container{
   display:grid;
   grid-template-columns:auto auto auto ;
@@ -92,6 +238,7 @@ export default {
 .projects{
   border-style:solid;
 }
+*/
 body{
   background:#1E90FF; 
 }
