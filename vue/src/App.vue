@@ -147,9 +147,11 @@ export default {
   margin-top: 20px;  
 }
 .container{
+  width:95%;
   background-color:white;
   min-height: fit-content;
   border-radius:10px;
+  margin:auto;
 }
 nav{
   margin:auto;
@@ -184,7 +186,7 @@ nav{
 
 .projects-grid{
   display:grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 50% 50%;
   column-gap: 50px;
 }
 .carousel-img{
@@ -240,6 +242,7 @@ nav{
 }
 */
 body{
-  background:#1E90FF; 
+  background: rgb(51,49,77);
+  background: linear-gradient(90deg, rgba(51,49,77,1) 0%, rgba(9,121,64,1) 81%, rgba(0,212,255,1) 100%);
 }
 </style>
