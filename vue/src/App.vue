@@ -1,5 +1,5 @@
 <template>
-<div>
+
 
   <div class="container">
     <nav>
@@ -12,7 +12,7 @@
       <div class="photo-box">
         <img src="../src/assets/profile.png" alt="profile-photo" width="280" height="300">
       </div>
-      <div class="works">
+      <!-- <div class="works">
         <n-divider title-placement="left">
           Works
         </n-divider>
@@ -35,7 +35,12 @@
           <li>MYSQL</li>
         </ul>
       </div>
+    </div> -->
+
+    <div class="description-box">
+      <personal-experience></personal-experience>
     </div>
+</div>
     <div class="grid-item">
       <div class="personal-description">
         <h1>Yinsheng Zhou</h1>
@@ -106,11 +111,8 @@
     </div>
     
     
-   
-  </div>
-
-
 </div>
+
 
  
   
@@ -122,10 +124,12 @@
 <script>
 
 import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel} from 'naive-ui'
+import PersonalExperience from '@/components/profile/PersonalExperience.vue'
 
 export default {
   name: 'App',
   components: {
+    PersonalExperience,
    NDivider,
    NTabs,
    NTabPane,
@@ -149,9 +153,11 @@ export default {
 .container{
   width:95%;
   background-color:white;
-  min-height: fit-content;
+  min-height: 720px;
   border-radius:10px;
-  margin:auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
 }
 nav{
   margin:auto;
