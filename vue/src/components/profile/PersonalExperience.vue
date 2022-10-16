@@ -2,9 +2,10 @@
    <div class="description-box">
     <n-card
     title="Personal Experiences"
-    :bordered="true">
-        <p>Hello N Card</p>
-        <p>This is the personal experience section which should have educations, work experiences and skills here....</p>
+    :bordered="true"
+    hoverable>
+      
+        <p>(This is the personal experience section which should have educations, work experiences and skills here....)</p>
    
 
       
@@ -29,7 +30,6 @@
         <n-list-item>
             CSS
         </n-list-item>
-
         </n-list>
         </n-card>
     </div>

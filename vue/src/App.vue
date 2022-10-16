@@ -8,41 +8,33 @@
 
 
     <div class="grid-container">
-    <div class="grid-item">    
+      
+    <div class="grid-item">
       <div class="photo-box">
-        <img src="../src/assets/profile.png" alt="profile-photo" width="280" height="300">
-      </div>
-      <!-- <div class="works">
-        <n-divider title-placement="left">
-          Works
-        </n-divider>
-        <ul>
-          <li>TCM Yard: Secretary</li>
-          <li>tcmyard-manager</li>
-          <li>FF14 Static Profile</li>          
-        </ul>
-      </div>
+      <n-card
+      hoverable>
+        
+          <template #cover
+          >
+          <img src="../src/assets/profile.png" alt="profile-photo" width="250" height="300">
+        </template>
+        
+      
+      </n-card>   
+    </div> 
+     
 
-      <div class="skills">
-        <n-divider title-placement="left">
-          Skills
-        </n-divider>
-        <ul>
-          <li>PHP</li>
-          <li>HTML</li>
-          <li>Javascript</li>
-          <li>CSS</li>
-          <li>MYSQL</li>
-        </ul>
-      </div>
-    </div> -->
 
     <div class="description-box">
       <personal-experience></personal-experience>
     </div>
 </div>
-    <div class="grid-item">
-      <div class="personal-description">
+
+    <div class="personal-details">
+      <div class="grid-item">
+      <n-card
+      hoverable>
+        <div class="personal-description">
         <h1>Yinsheng Zhou</h1>
         <n-p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sapiente deserunt sint in architecto ipsam deleniti temporibus, ad qui non illo optio iure, maxime beatae nemo recusandae sunt? Molestiae, dolorum.</n-p>
       </div>
@@ -59,8 +51,16 @@
           
         </div>
       </div>
+      </n-card>      
+     
+      
+     
+    </div>
+    
 
+    
       <div class="projects">
+      
         <n-divider
         title-placement="center">
           Projects
@@ -71,11 +71,34 @@
         <n-tab-pane
         name="tcmyard-manager"
         tab="TCM Yard Manager">
+
+        <n-card
+        hoverable>
+        <div class="project-aim">          
+          <n-divider
+          title-placement="left">
+          Project Aim
+        </n-divider>
+        <p>
+          (simple project aim and description here)
+        </p>         
+        </div>
+        </n-card>
+       
+
+
          <div class="projects-grid">
-          <div class="project-description">
-            <n-p>Project Descriptions:</n-p>
+          <n-card hoverable>
+            <div class="project-description">
+            <n-divider title-placement="left">Project Descriptions:</n-divider>
+            <p>(project details such as features, progress and so on here...)</p>
           </div>
+
+
+          </n-card>
           <div class="project-screenshots">
+          <n-card
+          hoverable>
             <div class="slides">
             <n-carousel show-arrow>
             <img src="../src/assets/1.jpg" alt="" class="carousel-img">
@@ -83,13 +106,18 @@
             <img src="../src/assets/3.jpg" alt="" class="carousel-img">
             <img src="../src/assets/4.jpg" alt="" class="carousel-img">
           </n-carousel>
+            <span>project project-screenshots</span>
           </div>
-          </div>
+        </n-card>
+        </div>
+         
           
-         </div>
+          
+        </div>
 
+ 
           
-          
+
           
         </n-tab-pane>
 
@@ -108,7 +136,7 @@
       </div>
       
       </div>
-    </div>
+</div>
     
     
 </div>
@@ -123,7 +151,7 @@
 
 <script>
 
-import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel} from 'naive-ui'
+import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel, NCard} from 'naive-ui'
 import PersonalExperience from '@/components/profile/PersonalExperience.vue'
 
 export default {
@@ -136,6 +164,7 @@ export default {
   NH2,
   NP,
   NCarousel,
+  NCard
 
   }
 }
@@ -190,10 +219,16 @@ nav{
   float:left;
 }
 
+.project-aim{
+  width:100%;
+}
+
 .projects-grid{
   display:grid;
   grid-template-columns: 50% 50%;
-  column-gap: 50px;
+  column-gap: 25px;
+  margin-top:10px;
+
 }
 .carousel-img{
   width:100%;

@@ -1,7 +1,8 @@
 <template>
     <div class="profile-box">
     <n-card
-    title="Yinsheng Zhou">
+    title="Yinsheng Zhou"
+    hoverable>
     <template #cover>
         <img src="../../assets/profile.png" alt="profile-image">   
     </template>
