@@ -1,10 +1,12 @@
 <template>
 
+<n-config-provider :theme="darkTheme">
+
 
   <div class="container">
-    <nav>
-      <p>(navigation bar)</p>
-    </nav>
+    <n-card>
+
+
 
 
     <div class="grid-container">
@@ -59,8 +61,8 @@
     
 
     
-      <div class="projects">
-      
+<div class="projects">
+      <n-card hoverable>
         <n-divider
         title-placement="center">
           Projects
@@ -72,25 +74,34 @@
         name="tcmyard-manager"
         tab="TCM Yard Manager">
 
-        <n-card
+        
+        
+      <n-card
         hoverable>
+
         <div class="project-aim">          
           <n-divider
           title-placement="left">
-          Project Aim
+          <n-text type="info">
+            <h3>Project Aim</h3>
+          </n-text>
+          
         </n-divider>
         <p>
-          (simple project aim and description here)
+          The aim for this project is to create a management system for the TCM Yard clinic. It aims to manage patient profiles and its records and symptom histories. 
+It also aims to record treatments made to each patient, there spending on each session of treatment. 
+Generating digital invoice and some basic statistics such as end of month balance, income graphs are also planned 
         </p>         
-        </div>
-        </n-card>
+        </div> <!--end of project aim class-->
+
+      </n-card>
        
 
 
          <div class="projects-grid">
           <n-card hoverable>
             <div class="project-description">
-            <n-divider title-placement="left">Project Descriptions:</n-divider>
+            <n-divider title-placement="left" dashed>Project Descriptions:</n-divider>
             <p>(project details such as features, progress and so on here...)</p>
           </div>
 
@@ -133,28 +144,34 @@
         Converters
         </n-tab-pane>
         </n-tabs>
-      </div>
+      </n-card>
+        
+      </div><!--end of projects class-->
       
       </div>
 </div>
-    
+</n-card>
     
 </div>
 
 
  
-  
 
 
+</n-config-provider>
 
 </template>
 
 <script>
+import {defineComponent,ref} from 'vue';
 
-import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel, NCard} from 'naive-ui'
+
+import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel, NCard, NText,darkTheme } from 'naive-ui'
 import PersonalExperience from '@/components/profile/PersonalExperience.vue'
 
-export default {
+
+
+export default defineComponent({
   name: 'App',
   components: {
     PersonalExperience,
@@ -164,10 +181,18 @@ export default {
   NH2,
   NP,
   NCarousel,
-  NCard
+  NCard,
+  NText
+ 
 
+  },
+  setup(){
+    return {
+      darkTheme,
+      theme:ref(null)
+    }
   }
-}
+});
 </script>
 
 <style>
@@ -179,22 +204,28 @@ export default {
   color: #2c3e50;
   margin-top: 20px;  
 }
+
+body{
+  background-color:#029bc263
+}
+
 .container{
   width:95%;
-  background-color:white;
+  background-color:rgba(85, 85, 85, 0.37);
   min-height: 720px;
   border-radius:10px;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:auto;
-}
-nav{
   margin:auto;
-  width:95%;
-  min-height: 50px;
-  border-radius: 10px;
-  border-style: solid;
 }
+
+@media screen and (max-width: 900px) {
+  
+
+  nav{
+    display:none;
+  }
+ 
+}
+
 .grid-container{
   display:grid;
   grid-template-columns: 300px auto;
@@ -219,8 +250,15 @@ nav{
   float:left;
 }
 
+.projects{
+  margin-top:1%;
+}
+
 .project-aim{
   width:100%;
+  text-align: left;
+  margin-left:1%;
+  
 }
 
 .projects-grid{
@@ -240,50 +278,6 @@ nav{
   padding:10px;
 }
 
-/*
-.container{
-  display:grid;
-  grid-template-columns:auto auto auto ;
-  margin:auto;
-  width:80%;
-  min-height:900px; 
-  background:white;
-  border-radius:25px;
-}
-
-.profile-box{
-  
-  width:80%;
-
-  margin:auto;
-  margin-top:1em
-}
 
 
-.photo-box{
-  width:100%;
-  min-height:250px;
-  border-style: solid;
-
-}
-
-
-.description{
-  margin-top:1em;
-  border-style:solid;
-  border-radius:25px;
-  width: 100%;
-  height: 500px;
-}
-
-
-
-.projects{
-  border-style:solid;
-}
-*/
-body{
-  background: rgb(51,49,77);
-  background: linear-gradient(90deg, rgba(51,49,77,1) 0%, rgba(9,121,64,1) 81%, rgba(0,212,255,1) 100%);
-}
 </style>

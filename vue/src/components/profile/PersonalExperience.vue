@@ -19,17 +19,18 @@
         clickable>
 
         <n-list-item>
-            <span>PHP/Laravel</span>
+       
+            <p>PHP/Laravel</p>
+            <span>Wordpress</span>
         </n-list-item>
+        <n-list-item>MySQL</n-list-item>
         <n-list-item>
             <span>Javascript/Vue</span>
         </n-list-item>
         <n-list-item>
-            <span>HTML</span>
+            <span>HTML/CSS/Bootstrap</span>
         </n-list-item>
-        <n-list-item>
-            CSS
-        </n-list-item>
+        
         </n-list>
         </n-card>
     </div>
@@ -49,6 +50,7 @@ export default{
         NList,
         NListItem,
         NDivider,
+       
     }
 }
 
