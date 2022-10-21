@@ -220,9 +220,6 @@ body{
 @media screen and (max-width: 900px) {
   
 
-  nav{
-    display:none;
-  }
  
 }
 
