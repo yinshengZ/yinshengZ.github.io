@@ -10,6 +10,7 @@
 
         <n-tabs
         type="card"
+        
         animated>
 
         <n-tab-pane
@@ -18,14 +19,18 @@
 
         <n-tabs
         type="line"
+        trigger="hover"
         animated>
         
         <n-tab-pane
         name="backend"
-        tab="Backend">        
-        <n-list
-        hoverable
-        bordered>
+        tab="Backend">     
+
+        <n-card>
+            <n-list
+            hoverable
+        >
+        
             <n-list-item>
                 <span>PHP/Laravel</span>
             </n-list-item>
@@ -33,6 +38,8 @@
                 <span>MYSQL</span>
             </n-list-item>
         </n-list>
+        </n-card>
+        
         </n-tab-pane>
 
         <n-tab-pane
@@ -87,7 +94,40 @@
         <n-tab-pane
         name="education"
         tab="Education">
-        <p>Educations</p>
+        <n-list
+        hoverable>
+        <n-list-item>
+            Aberystwyth University - Computer Science 
+        </n-list-item>
+        <n-list-item>
+            Bournemouth University - Foundation Computer Science
+        </n-list-item>
+        <n-list-item>
+            Bishop Gore School - A Levels
+        </n-list-item>
+        </n-list>
+        </n-tab-pane>
+
+        <n-tab-pane
+        name="works"
+        tab="Works">
+        
+        <n-tabs
+        type="lines"
+        trigger="hover"
+        animated>
+            <n-tab-pane
+            name="freelance"
+            tab="Freelance">
+
+            </n-tab-pane>
+            <n-tab-pane
+            name="personal_projects"
+            tab="Personal Projects">
+
+            </n-tab-pane>
+        </n-tabs>
+
         </n-tab-pane>
 
         </n-tabs>
@@ -124,6 +164,9 @@ export default{
     padding-left:10px;
     padding-right:10px;
     border-radius:10px;
+}
+n-list{
+    background-color:black;
 }
 
 

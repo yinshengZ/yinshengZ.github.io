@@ -1,7 +1,5 @@
 <template>
 
-<n-config-provider :theme="darkTheme">
-
 
   <div class="container">
     <n-card>
@@ -36,23 +34,8 @@
       <div class="grid-item">
       <n-card
       hoverable>
-        <div class="personal-description">
-        <h1>Yinsheng Zhou</h1>
-        <n-p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sapiente deserunt sint in architecto ipsam deleniti temporibus, ad qui non illo optio iure, maxime beatae nemo recusandae sunt? Molestiae, dolorum.</n-p>
-      </div>
-      <div class="description-grid">
-        <div class="description-grid-item description">
-          <div class="description-title">
-            <n-h2>Description:</n-h2>
-          </div>
-          
-        </div>
 
-        <div class="description-grid-item contacts">
-          <div class="description-title"><n-h2>Contacts:</n-h2></div>
-          
-        </div>
-      </div>
+      <personal-description></personal-description>
       </n-card>      
      
       
@@ -158,16 +141,17 @@ Generating digital invoice and some basic statistics such as end of month balanc
  
 
 
-</n-config-provider>
+
 
 </template>
 
 <script>
-import {defineComponent,ref} from 'vue';
+import {defineComponent} from 'vue';
 
 
-import {NDivider, NTabs, NTabPane, NH2,NP, NCarousel, NCard, NText,darkTheme } from 'naive-ui'
+import {NDivider, NTabs, NTabPane,  NCarousel, NCard, NText,} from 'naive-ui'
 import PersonalExperience from '@/components/profile/PersonalExperience.vue'
+import PersonalDescription from '@/components/profile/PersonalDescription.vue'
 
 
 
@@ -175,23 +159,18 @@ export default defineComponent({
   name: 'App',
   components: {
     PersonalExperience,
-   NDivider,
-   NTabs,
-   NTabPane,
-  NH2,
-  NP,
-  NCarousel,
-  NCard,
-  NText
+    PersonalDescription,
+    NDivider,
+    NTabs,
+    NTabPane, 
+    NCarousel,
+    NCard,
+    NText,
+
  
 
   },
-  setup(){
-    return {
-      darkTheme,
-      theme:ref(null)
-    }
-  }
+  
 });
 </script>
 
@@ -200,7 +179,7 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+/*text-align: center;*/
   color: #2c3e50;
   margin-top: 20px;  
 }
