@@ -196,11 +196,7 @@ body{
   margin:auto;
 }
 
-@media screen and (max-width: 900px) {
-  
 
- 
-}
 
 .grid-container{
   display:grid;
@@ -215,6 +211,16 @@ body{
   margin-top:2px;
 
 }
+
+@media screen and (max-width: 700px) {
+  .grid-container{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+
+ 
+}
+
 .description-grid{
   display:grid;
   grid-template-columns: auto auto;
