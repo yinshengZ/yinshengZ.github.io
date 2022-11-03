@@ -16,7 +16,7 @@
         
           <template #cover
           >
-          <img src="../src/assets/profile.png" alt="profile-photo" width="250" height="300">
+          <img src="../src/assets/profile.png" alt="profile-photo" >
         </template>
         
       
@@ -190,17 +190,13 @@ body{
 
 .container{
   width:95%;
-  background-color:rgba(85, 85, 85, 0.37);
+  background-color:rgba(194, 40, 40, 0.37);
   min-height: 720px;
   border-radius:10px;
   margin:auto;
 }
 
-@media screen and (max-width: 900px) {
-  
 
- 
-}
 
 .grid-container{
   display:grid;
@@ -252,6 +248,21 @@ body{
 
 .photo-box{
   padding:10px;
+}
+
+@media screen and (max-width: 500px) {
+  .container{
+    width:100%;
+  }
+  .grid-container{
+    width:100%;
+    grid-template-columns: 1fr;
+    padding:0px;
+  }
+  
+  
+
+ 
 }
 
 
