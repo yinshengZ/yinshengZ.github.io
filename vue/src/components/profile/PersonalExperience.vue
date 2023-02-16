@@ -1,12 +1,11 @@
 <template>
    <div class="description-box">
     <n-card
-    title="Personal Experiences"
+    title=""
     :bordered="true"
     hoverable>
       
-        <p>(This is the personal experience section which should have educations, work experiences and skills here....)</p>
-   
+       
 
         <n-tabs
         type="card"
@@ -164,6 +163,7 @@ export default{
     padding-left:10px;
     padding-right:10px;
     border-radius:10px;
+    margin-top:5px;
 }
 n-list{
     background-color:black;

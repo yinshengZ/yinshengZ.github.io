@@ -23,11 +23,19 @@
       </n-card>   
     </div> 
      
-
+    <div class="contacts">
+     
+    </div>
 
     <div class="description-box">
+      <personal-contacts></personal-contacts>
       <personal-experience></personal-experience>
+      
+     
+      
     </div>
+
+   
 </div>
 
     <div class="personal-details">
@@ -36,7 +44,10 @@
       hoverable>
 
       <personal-description></personal-description>
-      </n-card>      
+      
+      </n-card>
+      
+     
      
       
      
@@ -152,6 +163,7 @@ import {defineComponent} from 'vue';
 import {NDivider, NTabs, NTabPane,  NCarousel, NCard, NText,} from 'naive-ui'
 import PersonalExperience from '@/components/profile/PersonalExperience.vue'
 import PersonalDescription from '@/components/profile/PersonalDescription.vue'
+import PersonalContacts from '@/components/profile/PersonalContacts.vue'
 
 
 
@@ -160,6 +172,7 @@ export default defineComponent({
   components: {
     PersonalExperience,
     PersonalDescription,
+    PersonalContacts,
     NDivider,
     NTabs,
     NTabPane, 
