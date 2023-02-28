@@ -48,19 +48,6 @@
         <span>Mobile: 07908153858</span>
         </n-popover>
 
-        <!--github contact-->
-        <n-button
-        tertiary
-        circle
-        type="info">
-        <template #icon>
-            <n-icon>
-                <a href="https://github.com/yinshengZ" target="_blank"><github-icon></github-icon></a> 
-            </n-icon>
-        </template>
-        </n-button>
-
-
         <n-popover
         placement="top"
         trigger="click"
@@ -82,10 +69,33 @@
         </n-button>
 
         </template>
-        <span>297541852</span>
-       
+        <span>297541852</span>       
 
         </n-popover>
+
+         <!--github contact-->
+        <n-button
+        tertiary
+        circle
+        type="info">
+        <template #icon>
+            <n-icon>
+                <a href="https://github.com/yinshengZ" target="_blank"><github-icon></github-icon></a> 
+            </n-icon>
+        </template>
+        </n-button>
+
+         <!--github contact-->
+         <n-button
+        tertiary
+        circle
+        type="info">
+        <template #icon>
+            <n-icon>
+                <a href="https://www.linkedin.com/in/yinsheng-zhou-388183252/" target="_blank"><linkedin-icon></linkedin-icon></a> 
+            </n-icon>
+        </template>
+        </n-button>
        
 
           
@@ -103,9 +113,10 @@ import EmailIcon from "@/assets/icons/email.vue"
 import PhoneIcon from "@/assets/icons/phone.vue"
 import GithubIcon from "@/assets/icons/github.vue"
 import QqIcon from "@/assets/icons/qq.vue"
+import LinkedinIcon from "@/assets/icons/linkedin.vue"
 
 export default{
-    components:{NCard, NButton, NIcon, NPopover,EmailIcon, PhoneIcon, GithubIcon, QqIcon}
+    components:{NCard, NButton, NIcon, NPopover,EmailIcon, PhoneIcon, GithubIcon, QqIcon, LinkedinIcon}
 }
 
 
